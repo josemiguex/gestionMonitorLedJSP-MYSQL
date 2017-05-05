@@ -20,36 +20,38 @@
 
 </head>
 <body>
+<h1>Modificar MonitorLED</h1>
+
 <%MonitorLED mled = (MonitorLED)request.getAttribute("monitorled"); %>
 <form class="col s12" action="MainServlet?action=modifiedmonitorled" method="post">
 <div class="row">
 
-<div class="input-field col l4 m12 s12">
+<div class="input-field col l4 m6 s12">
 <input type="text" name="modelo" id="modelo" value="<%= mled.getModelo() %>" placeholder="Escriba aquí el modelo" required>
 <label for="modelo">Modelo</label>
 </div>
 
-<div class="input-field col l4 m12 s12">
+<div class="input-field col l4 m6 s12">
 <input type="number"  step="0.01" name="precio" id="precio" value="<%= mled.getPrecio() %>" placeholder="Escriba aquí el precio" required>
 <label for="precio">Precio</label>
 </div>
 
-<div class="input-field col l4 m12 s12">
-<input type="text" name="resolucion" id="resolucion" value="<%= mled.getResolucion() %>" placeholder="Escriba aquí la resolución" required>
-<label for="resolucion">Resolución</label>
+<div class="input-field col l4 m6 s12">
+<input type="number" step="0.1" name="pulgadas" id="pulgadas" value="<%= mled.getPulgadas() %>" placeholder="Escriba aquí las pulgadas" required>
+<label for="pulgadas">Pulgadas</label>
 </div>
 
-<div class="input-field col l4 m12 s12">
+<div class="input-field col l4 m6 s12">
 <input type="text" name="marca" id="marca" value="<%= mled.getMarca() %>" placeholder="Escriba aquí la marca" required>
 <label for="resolucion">Marca</label>
 </div>
 
-<div class="input-field col l4 m12 s12">
+<div class="input-field col l4 m6 s12">
 <input type="text" name="tipo" id="Tipo" value="<%= mled.getTipo() %>" placeholder="Escriba aquí el tipo" required>
 <label for="tipo">Tipo</label>
 </div>
 
-<div class="input-field col l4 m12 s12">
+<div class="input-field col l4 m6 s12">
 <input type="number" name="cantidad" id="Tipo" value="<%= mled.getCantidad() %>" placeholder="Escriba aquí la cantidad" required>
 <label for="cantidad">Cantidad</label>
 </div>

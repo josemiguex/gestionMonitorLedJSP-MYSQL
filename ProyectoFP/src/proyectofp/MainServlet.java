@@ -74,12 +74,12 @@ public class MainServlet extends HttpServlet {
 				while (rs.next()) {
 					String modelo = rs.getString("MODELO");
 					String precio = rs.getString("PRECIO");
-					String resolucion = rs.getString("RESOLUCION");
+					String pulgadas = rs.getString("PULGADAS");
 					String marca = rs.getString("MARCA");
 					String tipo = rs.getString("TIPO");
 					String cantidad = rs.getString("CANTIDAD");
 
-					monitorledaux[i] = new MonitorLED(modelo, precio, resolucion, marca, tipo, cantidad);
+					monitorledaux[i] = new MonitorLED(modelo, precio, pulgadas, marca, tipo, cantidad);
 					i++;
 
 				}
@@ -102,7 +102,7 @@ public class MainServlet extends HttpServlet {
 			monitorled = new MonitorLED[i];
 			for (int j = 0; j < i; j++) {
 				monitorled[j] = new MonitorLED(monitorledaux[j].getModelo(), monitorledaux[j].getPrecio(),
-						monitorledaux[j].getResolucion(), monitorledaux[j].getMarca(), monitorledaux[j].getTipo(),
+						monitorledaux[j].getPulgadas(), monitorledaux[j].getMarca(), monitorledaux[j].getTipo(),
 						monitorledaux[j].getCantidad());
 			}
 			request.setAttribute("monitorled", monitorled);
@@ -126,12 +126,12 @@ public class MainServlet extends HttpServlet {
 				while (rs.next()) {
 					String modelo = rs.getString("MODELO");
 					String precio = rs.getString("PRECIO");
-					String resolucion = rs.getString("RESOLUCION");
+					String pulgadas = rs.getString("PULGADAS");
 					String marca = rs.getString("MARCA");
 					String tipo = rs.getString("TIPO");
 					String cantidad = rs.getString("CANTIDAD");
 
-					mled = new MonitorLED(modelo, precio, resolucion, marca, tipo, cantidad);
+					mled = new MonitorLED(modelo, precio, pulgadas, marca, tipo, cantidad);
 
 				}
 
@@ -191,9 +191,9 @@ public class MainServlet extends HttpServlet {
 				}
 
 				if (!repetido) {
-					String query2 = "INSERT INTO MonitorLED (MODELO, PRECIO, RESOLUCION, MARCA, TIPO, CANTIDAD) VALUES ('"
+					String query2 = "INSERT INTO MonitorLED (MODELO, PRECIO, PULGADAS, MARCA, TIPO, CANTIDAD) VALUES ('"
 							+ request.getParameter("modelo") + "','" + request.getParameter("precio") + "','"
-							+ request.getParameter("resolucion") + "','" + request.getParameter("marca") + "','"
+							+ request.getParameter("pulgadas") + "','" + request.getParameter("marca") + "','"
 							+ request.getParameter("tipo") + "','" + request.getParameter("cantidad") + "')";
 					stmt2 = connection.createStatement();
 					int insert = stmt2.executeUpdate(query2);
@@ -272,7 +272,7 @@ public class MainServlet extends HttpServlet {
 				if (!repetido) {
 					String query = "UPDATE MonitorLED SET MODELO='" + request.getParameter("modelo") + "', PRECIO="
 							+ request.getParameter("precio") + ", TIPO='" + request.getParameter("tipo")
-							+ "', RESOLUCION='" + request.getParameter("resolucion") + "', MARCA='"
+							+ "', PULGADAS='" + request.getParameter("pulgadas") + "', MARCA='"
 							+ request.getParameter("marca") + "', CANTIDAD='" + request.getParameter("cantidad")
 							+ "' WHERE MODELO='" + request.getParameter("modeloantiguo") + "'";
 					stmt = connection.createStatement();

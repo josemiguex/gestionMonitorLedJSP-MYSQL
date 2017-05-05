@@ -3,15 +3,15 @@ package proyectofp;
 public class MonitorLED {
 	String modelo;
 	String precio;
-	String resolucion;
+	String pulgadas;
 	String marca;
 	String tipo;
 	String cantidad;
 	
-	public MonitorLED(String mo, String p, String r, String ma, String t, String c) {
+	public MonitorLED(String mo, String pa, String pu, String ma, String t, String c) {
 		this.modelo = mo;
-		this.precio = p;
-		this.resolucion = r;
+		this.precio = pa;
+		this.pulgadas = pu;
 		this.marca = ma;
 		this.tipo = t;
 		this.cantidad = c;
@@ -42,12 +42,12 @@ public class MonitorLED {
 		this.precio = precio;
 	}
 
-	public String getResolucion() {
-		return resolucion;
+	public String getPulgadas() {
+		return pulgadas;
 	}
 
-	public void setResolucion(String resolucion) {
-		this.resolucion = resolucion;
+	public void setResolucion(String pulgadas) {
+		this.pulgadas = pulgadas;
 	}
 
 	public String getMarca() {

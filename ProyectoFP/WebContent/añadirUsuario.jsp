@@ -22,32 +22,32 @@
 <form class="col s12" action="MainServlet?action=addedmonitorled" method="post">
 <div class="row">
 
-<div class="input-field col l4 m12 s12">
+<div class="input-field col l4 m6 s12">
 <input type="text" name="modelo" id="modelo" placeholder="Escriba aquí el modelo" required>
 <label for="modelo">Modelo</label>
 </div>
 
-<div class="input-field col l4 m12 s12">
+<div class="input-field col l4 m6 s12">
 <input type="number" step="0.01" name="precio" id="precio" placeholder="Escriba aquí el precio" required>
 <label for="precio">Precio</label>
 </div>
 
-<div class="input-field col l4 m12 s12">
-<input type="text" name="resolucion" id="resolucion" placeholder="Escriba aquí la resolución" required>
-<label for="resolucion">Resolución</label>
+<div class="input-field col l4 m6 s12">
+<input type="number" step="0.1" name="pulgadas" id="pulgadas" placeholder="Escriba aquí las pulgadas" required>
+<label for="pulgadas">Pulgadas</label>
 </div>
 
-<div class="input-field col l4 m12 s12">
+<div class="input-field col l4 m6 s12">
 <input type="text" name="marca" id="marca" placeholder="Escriba aquí la marca" required>
-<label for="resolucion">Marca</label>
+<label for="marca">Marca</label>
 </div>
 
-<div class="input-field col l4 m12 s12">
+<div class="input-field col l4 m6 s12">
 <input type="text" name="tipo" id="Tipo" placeholder="Escriba aquí el tipo" required>
 <label for="tipo">Tipo</label>
 </div>
 
-<div class="input-field col l4 m12 s12">
+<div class="input-field col l4 m6 s12">
 <input type="number" name="cantidad" id="Tipo" placeholder="Escriba aquí la cantidad" required>
 <label for="cantidad">Cantidad</label>
 </div>

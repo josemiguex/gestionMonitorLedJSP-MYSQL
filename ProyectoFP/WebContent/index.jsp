@@ -48,7 +48,7 @@ h3 {
 		<tr>
 			<th>Modelo</th>
 			<th>Precio</th>
-			<th>Resolución</th>
+			<th>Pulgadas</th>
 			<th>Marca</th>
 			<th>Tipo</th>
 			<th>Cantidad</th>
@@ -61,7 +61,7 @@ h3 {
 			out.print("<tr><td>" + monitorled[i].getModelo()
 					+ "</td><td>"
 					+ " " + monitorled[i].getPrecio() + "€</td><td>"
-					+ monitorled[i].getResolucion() + "</td><td>" + monitorled[i].getMarca() + "</td><td>"
+					+ monitorled[i].getPulgadas() + "\"</td><td>" + monitorled[i].getMarca() + "</td><td>"
 					+ monitorled[i].getTipo() + "</td><td>"
 					+ monitorled[i].getCantidad() + "</td><td><form action=\"MainServlet\" method=\"post\"> <input type=\"hidden\" name=\"action\" value=\"deletemonitorled\"><input type=\"hidden\" name=\"modelo\" value=\"" + monitorled[i].getModelo() + "\"><input type=\"submit\" value=\"Eliminar\"></form> </td><td><form action=\"MainServlet\" method=\"get\"> <input type=\"hidden\" name=\"action\" value=\"modifymonitorled\"><input type=\"hidden\" name=\"modelo\" value=\"" + monitorled[i].getModelo() + "\"><input type=\"submit\" value=\"Modificar\"></form> </td>");
 	}
