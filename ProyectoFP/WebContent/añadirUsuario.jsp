@@ -52,7 +52,7 @@
 <label for="cantidad">Cantidad</label>
 </div>
 
-<input type="submit" value="Añadir MonitorLED">
+<button class="waves-effect waves-light btn" type="submit" name="añadir">Añadir MonitorLED</button>
 </form>
 </body>
 </html>

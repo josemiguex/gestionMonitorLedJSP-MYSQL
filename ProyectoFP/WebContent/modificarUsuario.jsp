@@ -57,7 +57,7 @@
 </div>
 
 <input type="hidden" name="modeloantiguo" value="<%= mled.getModelo() %>">
-<input type="submit" value="Modificar MonitorLED">
+<button class="waves-effect waves-light btn" type="submit" name="modificar">Modificar MonitorLED</button>
 </form>
 </body>
 </html>
