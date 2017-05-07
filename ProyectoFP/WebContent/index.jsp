@@ -26,6 +26,7 @@ h3 {
 <title>Gestión MonitoresLED</title>
 </head>
 <body>
+
 	<h3>Gestión de monitores LED</h3>
 
 	<script>
@@ -58,7 +59,7 @@ h3 {
 							out.print("<tr><td>" + monitorled[i].getModelo() + "</td><td>" + " " + monitorled[i].getPrecio()
 									+ "€</td><td>" + monitorled[i].getPulgadas() + "\"</td><td>" + monitorled[i].getMarca()
 									+ "</td><td>" + monitorled[i].getTipo() + "</td><td>" + monitorled[i].getCantidad()
-									+ "</td><td><form action=\"MainServlet\" method=\"post\"> <input type=\"hidden\" name=\"action\" value=\"deletemonitorled\"><input type=\"hidden\" name=\"modelo\" value=\""
+									+ "</td><td><form name=\"eliminar\" action=\"MainServlet\" method=\"get\"> <input type=\"hidden\" name=\"action\" value=\"deletemonitorled\"><input type=\"hidden\" name=\"modelo\" value=\""
 									+ monitorled[i].getModelo()
 									+ "\"><button name=\"eliminar\" class=\"btn waves-effect red\" type=\"submit\">Eliminar</button></form> </td><td><form action=\"MainServlet\" method=\"get\"> <input type=\"hidden\" name=\"action\" value=\"modifymonitorled\"><input type=\"hidden\" name=\"modelo\" value=\""
 									+ monitorled[i].getModelo() + "\"><button type=\"submit\" class=\"btn waves-effect blue\" value=\"Modificar\">Modificar</form> </td>");

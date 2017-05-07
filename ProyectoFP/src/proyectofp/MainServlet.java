@@ -153,6 +153,9 @@ public class MainServlet extends HttpServlet {
 			request.setAttribute("monitorled", mled);
 			nextJSP = "/modificarUsuario.jsp";
 			break;
+		case "deletemonitorled":
+			nextJSP = "/confirmarEliminacion.jsp?modelo=" + request.getParameter("modelo");
+			break;
 		}
 		RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(nextJSP);
 		dispatcher.forward(request, response);
@@ -221,7 +224,7 @@ public class MainServlet extends HttpServlet {
 				}
 			}
 			break;
-		case "deletemonitorled":
+		case "deletedmonitorled":
 			try {
 				ctx = new InitialContext();
 				DataSource ds = (DataSource) ctx.lookup("java:comp/env/jdbc/MonitorLED");
