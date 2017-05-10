@@ -4,33 +4,39 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
 <link rel="stylesheet"
-	href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
-<script type="text/javascript"
-	src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <script
-	src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 <title>Confirmar eliminación</title>
+<style>
+body {
+	background-image: url(Background/confirmarEliminacion.jpg);
+	background-attachment: fixed; /*para que sea estático*/
+	background-position: top left; /*arriba a la derecha*/
+	background-repeat: no-repeat; /*que no se repita el fondo*/
+}
+
+</style>
 </head>
 <body>
-
+<center>
 <h3>Confirmar eliminación</h3>
 <p>¿Estás seguro de que desea eliminar el modelo <b> <%=request.getParameter("modelo") %></b>?</p>
 
 <form action="MainServlet" method="post">
 		<input type="hidden" name="action" value="deletedmonitorled">
 		<input type="hidden" name="modelo" value="<%=request.getParameter("modelo")%>">
-		<button class="waves-effect grey btn" type="submit">Sí</button>
+		<button class="btn btn-danger btn-block" type="submit">Sí</button>
 	</form>
 	<br>
 	<form action="MainServlet">
 		<input type="hidden" name="action" value="main">
-		<button class="waves-effect grey btn" type="submit">No</button>
+		<button class="btn btn-primary btn-block" type="submit">No</button>
 	</form>
-	
+	</center>
 </body>
 </html>
